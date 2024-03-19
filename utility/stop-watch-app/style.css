@@ -1,0 +1,57 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+}
+
+.stop-watch{
+    font-weight: lighter;
+    font-size: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-self: center;
+    letter-spacing: 4px;
+}
+
+.buttons-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.reset-button{
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 60px;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    font-size: 16px;
+    margin-right: 40px;
+}
+
+.start-button{
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 80px;
+    color: rgb(103, 206, 103);
+    background-color: rgb(18, 41, 20);
+    font-size: 16px;
+    margin-left: 60px;
+}
+
+.stop-button{
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 80px;
+    color: rgb(235, 85, 69);
+    background-color: rgb(46, 16, 13);
+    font-size: 16px;
+    margin-left: 60px;
+}

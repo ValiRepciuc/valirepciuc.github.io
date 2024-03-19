@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+  <div class="left-side">
+      <p class="game-title">Rock Paper Scissors</p>
+
+      <button class="js-rock-button game-button">
+        <img src="icons/rock-emoji.png" class="game-button-icon">
+      </button>
+      
+      <button class="js-paper-button game-button">
+        <img src="icons/paper-emoji.png" class="game-button-icon" >
+      </button>
+
+      <button class="js-scissors-button game-button">
+        <img src="icons/scissors-emoji.png" class="game-button-icon">
+      </button>
+      <p class="js-result css-result"></p>
+      <p class="js-moves css-moves"></p>
+      <p class="js-score css-score"></p>
+      <div class="buttons:">
+        <button class="reset-score-button js-reset-button">
+          Reset Score
+        </button>
+        <button class="auto-play-button js-auto-play-button">
+          Auto Play
+        </button>
+      </div>
+      <p class="js-confirm-reset"></p>
+  </div>
+  
+  <div class="right-side">
+    
+      <div class="legend">
+        <p class="title-legend">Legend:</p>
+        <p>*Press the following buttons on your keyboard to choose your object:*</p>
+        <p>R/r = Rock</p>
+        <p>P/p = Paper</p>
+        <p>S/s = Scissors</p>
+        <p>Backspace = Reset</p>
+        <p>A/a = Autoplay</p>
+      </div>
+  </div>
+</div>
+
+   <script src="rock-paper-scissors.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+body{
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: arial;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 2fr));
+    gap: 5px;
+    grid-auto-flow: dense;
+    justify-content: center;
+}
+@media screen and (max-width: 700px) { 
+    .container {
+      grid-template-columns: 0.92fr; 
+    }
+    .left-side,
+    .right-side {
+        grid-column: 1; 
+        min-width: 100%;
+    }
+}
+
+.left-side{
+    
+    min-width: 50%;
+    max-width: 100%;
+    padding-left: 10px;
+    justify-self: center;
+}
+
+
+.game-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.game-button{
+    width: 120px;
+    height: 120px;
+    border: solid;
+    border-radius: 60px;
+    border-color: white;
+    border-width: 3px;
+    background-color: rgb(25, 25, 25);
+    cursor: pointer;
+    
+}
+
+.game-button-icon{
+    width: 50px;
+}
+
+.css-result{
+
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.css-moves{
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.css-score{
+    margin-top: 60px;
+}
+
+.reset-score-button,
+.auto-play-button,
+.yes-confirm-reset,
+.no-confirm-reset
+{
+    border: none;
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+
+.right-side{
+    min-width: 60%;
+    max-width: 100%;
+    justify-self: center;
+}
+.title-legend{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.legend p{
+    font-size: 16px;
+    
+}

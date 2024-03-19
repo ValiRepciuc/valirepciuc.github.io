@@ -1,0 +1,82 @@
+body{
+
+    font-family: "Galindo", sans-serif;
+    background-color: #89CFF0;
+
+}
+.header-container{
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    display: grid;
+    text-align: center;
+}
+.game-title{
+    font-weight: bold;
+}
+.main-container{
+    display: grid;
+    border: solid;
+    border-color: white;
+    border-radius: 125px;
+    background-color: white;
+    min-width: none;
+    max-width: 1080px;
+    height: 480px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.score-table{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+.game-container .cell{
+
+    border: solid;
+    border-width: 2px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 80px;
+    text-align: center;
+    justify-content: center;
+}
+
+.game-container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 45px;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.reset-game,
+.reset-score
+{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Galindo", sans-serif;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+    width: 150px;
+}
+
+.text{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}

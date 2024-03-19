@@ -1,0 +1,186 @@
+.about-me{
+    height: 600px;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+}
+
+.more-about-me-container{
+    width: 600px;
+    margin: 40px 0px 40px 40px;
+    font-size: 24px;
+    padding: 30px 20px 30px 20px;
+}
+
+.more-about-me-container p{
+    animation: fade-in-up linear;
+    animation-duration: 1.5s;
+    animation-timeline: view();
+    animation-range-start: 0%;
+    animation-range-end: 50%;
+    animation-timing-function: ease-in-out;
+}
+
+.skills-container{
+    margin: 40px 0px 0px 40px;
+    padding: 20px 20px 20px 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    animation: fade-in-up linear;
+    animation-duration: 1.5s;
+    animation-timeline: view();
+    animation-range-start: 2%;
+    animation-range-end: 50%;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-in-up {
+    from{
+        scale: 0.8;
+        opacity: 0;
+        transform: translateY(-7%);
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.skills-text{
+    text-align: center;
+    font-family: "Syne";
+    font-size: 34px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 0;
+}
+.skills-cassetes{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+
+}
+.skill{
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Syne";
+    margin: 4px 2px 16px 2px;
+    background-color: #8A817C;
+    padding: 4px 8px 4px 8px;
+    border-radius: 4px;
+    height: 40px;
+    
+}
+
+.viewport{
+    overflow: hidden;
+    position: relative;
+}
+.first-six{
+    overflow: hidden;
+    display: flex;
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scrolling-left 14s linear infinite;
+    animation-timing-function: ease-in-out;
+    
+}
+
+
+@keyframes scrolling-left{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-41%);
+    }
+
+}
+
+.last-five{
+    overflow: hidden;
+    display: flex;
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scrolling-right 14s linear infinite;
+    animation-timing-function: ease-in-out;   
+}
+
+.last-five .skill{
+    font-weight: bolder;
+}
+
+@keyframes scrolling-right{
+    0%{
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@media screen and (max-width: 600px) {
+    .about-me {
+        grid-template-columns: 1fr; 
+        padding-top: 20px;
+    }
+
+    .more-about-me-container {
+        width: 90%; 
+        margin: 20px auto; 
+        font-size: 14px; 
+    }
+
+    .skills-container {
+        margin: 10px auto;
+        font-size: 10px; 
+        animation: fade-in-up linear;
+        animation-duration: 1.5s;
+        animation-timeline: view();
+        animation-range-start: 2%;
+        animation-range-end: 50%;
+        animation-timing-function: ease-in-out;
+    }
+    .skills-text{
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .skills-cassetes {
+        margin-top: 20px;
+        width: 350px;
+    }
+
+    .first-six, .last-five {
+        animation: none; 
+        overflow: auto; 
+    }
+    .first-six{
+        overflow: hidden;
+        display: flex;
+        width: max-content;
+        flex-wrap: nowrap;
+        animation: scrolling-left 14s linear infinite;
+        animation-timing-function: ease-in-out;
+        
+    }
+
+    .last-five{
+        overflow: hidden;
+        display: flex;
+        width: max-content;
+        flex-wrap: nowrap;
+        animation: scrolling-right 14s linear infinite;
+        animation-timing-function: ease-in-out;   
+    }
+
+    .first-six,
+    .last-five{
+        font-weight: 500;
+    }
+}
+
+
