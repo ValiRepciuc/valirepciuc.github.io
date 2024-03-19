@@ -1,0 +1,230 @@
+*{
+    font-family: 'Roboto';
+}
+body{
+    height: 2600px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.main-container{
+    display: grid;
+    top: 90px;
+    left: 0;
+    right: 0;
+    grid-template-columns: 600px 800px;
+    justify-content: space-around;
+}
+.text-container{
+    margin-top: 40%;
+    width: 600px;
+}
+.text-container a{
+    text-decoration: none;
+}
+.first-row{
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 34px;
+    color: #596168;
+}
+
+.second-row{
+    font-weight: bold;
+    font-size: 52px;
+    color:#343a40;
+}
+
+.third-row{
+    font-weight: 600;
+    font-size: 36px;
+    color: #596168;
+}
+
+.hire-me-btn{
+    height: 46px;
+    width: 140px;
+    font-size: 24px;
+    font-weight: 450;
+    padding: 10px 5px 10px 5px;
+    border: 1px solid #596168;
+    background-color: #596168;
+    color: #F4F3EE;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    margin-right: 16px;
+}
+.CV-btn{
+    height: 46px;
+    width: 200px;
+    font-size: 24px;
+    font-weight: 450;
+    padding: 10px 5px 10px 5px;
+    border: 1px solid #596168;
+    background-color: #F4F3EE;
+    color: #596168;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    margin-left: 16px;
+}
+
+.hire-me-btn:hover {
+    color: #596168; 
+    background-color: #F4F3EE;
+}
+.CV-btn:hover{
+    color:#F4F3EE;
+    background-color: #596168;
+}
+.hire-me-btn:active, .CV-btn:active{
+    opacity: 0.7;
+}
+
+.photos-container{
+    display: grid;
+    grid-template-columns: 520px 100px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+    height: 600px;
+}
+
+.main-photo{
+    width: 100%;
+    height: 80%;
+    margin-top: 40px;
+    margin-left: 2em;
+    animation: photo-fade-in linear;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes photo-fade-in {
+
+    from{
+        scale: 0.8;
+        opacity: 0.6;
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+    
+}
+
+.accounts-photos{
+    width: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+}
+
+.accounts-photos img{
+    width: 40px;
+    height: 40px;
+    transition: transform .5s;
+}
+
+.accounts-photos img:hover{
+    transform: scale(1.75);
+}
+
+.transition-main-more-about-me{
+    margin-top: 80px;
+    transition: transform .5s;
+    animation: jumping 1.5s infinite alternate ease-in-out;
+
+}
+.transition{
+    font-weight: bold;
+    font-size: 34px;
+    text-align: center;
+    color: #596168;
+    margin: 0;
+    margin-bottom: 0;
+}
+.transition-main-more-about-me a{
+    cursor: pointer;
+    text-decoration: none;
+}
+@keyframes jumping {
+    0%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(30px);
+    }
+}
+
+@media screen and (max-width: 600px){
+    body{
+        height: 2200px;
+    }
+    .main-container {
+        grid-template-columns: 1fr;
+        justify-content: center; 
+    }
+
+    .text-container{
+        margin-top: 100px;
+        width: 100%;
+        margin-left: 10px;
+    }
+    .first-row{
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-size: 12px;
+        color: #596168;
+    }
+    .second-row{
+
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .third-row{
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .hire-me-btn{
+
+        height: 30px;
+        width: 80px;
+        font-size: 10px;
+        font-weight: 300;
+        margin-right: 1px;
+    }
+    .CV-btn{
+        place-items: center;
+        height: 30px;
+        width: 120px;
+        font-size: 10px;
+        font-weight: 300;
+        margin-left: 1px;
+    }
+    .photos-container{
+        grid-template-columns: 280px 60px;
+        margin-top: 2%;
+        height: 100%;
+    }
+    .main-photo{
+        width: 100%;
+        height: 75%;
+    }
+    .accounts-photos{
+        width: 30px;
+        height: 150px;
+    }
+    .accounts-photos img{
+        width: 20px;
+        height: 20px;
+    }
+    .transition-main-more-about-me{
+        margin-top: 60px;
+    }
+    .transition{
+        font-weight: 500;
+        font-size: 16px;
+    }
+}

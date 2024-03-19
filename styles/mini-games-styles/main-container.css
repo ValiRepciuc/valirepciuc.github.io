@@ -1,0 +1,158 @@
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main-container{
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    row-gap: 48px;
+    column-gap: 48px;
+    justify-content: center;
+    place-items: center;
+}
+.main-container a{
+    text-decoration: none;
+    color: inherit;
+}
+.upper{
+    border: 1px solid black;
+    object-fit: contain;
+    height: 300px;
+    width: 400px;
+}
+
+.preview:nth-child(3){
+    grid-column: span 2;
+    align-self: center;
+}
+.lower{
+    height: 50px;
+    border: 1px solid black;
+    background-color: #BCB8B1;
+    text-align: center;
+    font-family: "Syne";
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0;
+    width: 400px;
+}
+
+.lower p {
+    margin-top: 12px;
+}
+
+.preview {
+    width: 400px;
+    height: 352px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    z-index: 0;
+    cursor: pointer;
+    animation: fade-in linear;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-in {
+
+    from{
+        scale: 0.8;
+        opacity: 0.6;
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+    
+}
+
+.preview:hover {
+    animation: rotate 1s linear infinite alternate, stopRotation 1s forwards;
+}
+@keyframes rotate {
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes stopRotation {
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #8A817C;
+    font-family: "Syne";
+    letter-spacing: 0.7px;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+    border-radius: 20px;
+}
+
+.back p{
+    padding: 8px 6px 8px 6px;
+}
+
+.preview:hover .back {
+    opacity: 1;
+}
+.back:active{
+    scale: 0.9;
+}
+@media screen and (max-width: 600px){
+
+    .main-container {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        margin-bottom: 64px;
+    }
+
+    .upper,
+    .lower {
+        width: 300px; /* Stabilește lățimea dorită */
+    }
+
+    .upper {
+        height: 250px; /* Setează înălțimea */
+    }
+
+    .lower {
+        height: 30px; /* Setează înălțimea */
+    }
+
+    .lower p {
+        font-size: 14px; /* Redimensionează dimensiunea fontului */
+    }
+    .preview {
+        width: 300px;
+        height: 282px;
+    }
+}
